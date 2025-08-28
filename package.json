@@ -1,17 +1,17 @@
 {
   "name": "projeto_sivs",
   "version": "1.0.0",
-  "scripts": {
-    "dev": "parcel --no-cache src/index.html src/os.html src/styles/main.scss src/scripts/main.js",
-    "build": "parcel build src/index.html src/os.html --dist-dir dist", 
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "description": "",
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.15.4",
-    "parcel": "^2.15.4"
-  }
+  "scripts": {
+    "dev": "npx parcel --no-cache src/index.html src/os.html src/styles/main.scss src/scripts/main.js",
+    "build": "npx parcel build src/index.html src/os.html --dist-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "parcel": "^2.15.4",
+    "@parcel/transformer-sass": "^2.15.4"
+  },
+  "devDependencies": {}
 }
