@@ -5,13 +5,11 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "npx parcel --no-cache src/index.html src/os.html src/styles/main.scss src/scripts/main.js",
-    "build": "npx parcel build src/index.html src/os.html --dist-dir dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx parcel src/index.html src/os.html src/styles/main.scss src/scripts/main.js",
+    "build": "npx parcel build src/index.html src/os.html --dist-dir dist"
   },
   "dependencies": {
-    "parcel": "^2.15.4",
-    "@parcel/transformer-sass": "^2.15.4"
-  },
-  "devDependencies": {}
+    "@parcel/transformer-sass": "^2.15.4",
+    "parcel": "^2.15.4"
+  }
 }
