@@ -778,7 +778,7 @@ formArquivo.addEventListener("submit", (event)=>{
     }
 });
 // -------------------------------
-// ASSINATURA CLIENTE COM VERIFICAÇÃO E MODAL
+// ASSINATURA CLIENTE COM VALIDAÇÃO, MODAL E DESABILITAÇÃO
 // -------------------------------
 // elementos do DOM
 const btnAssCliente = document.getElementById("btn-ass-cliente");
@@ -934,12 +934,20 @@ function salvarAssinatura(nome, dataURL) {
     const agora = new Date();
     const dataHoraFormatada = agora.toLocaleString();
     info.textContent = `Assinatura de ${nome} salva em ${dataHoraFormatada}`;
-    // esconder formulário e desabilitar botão
+    // esconder formulário e desabilitar botões de assinatura
     formCliente.style.display = "none";
     btnAssCliente.disabled = true;
     btnAssCliente2.disabled = true;
     btnAssCliente.style.display = "none";
     btnAssCliente2.style.display = "none";
+    // DESABILITAR CAMPOS VERIFICADOS, mantendo os valores
+    camposObrigatorios.forEach((campo)=>{
+        const el = document.getElementById(campo.id);
+        if (el) el.disabled = true;
+    });
+    // DESABILITAR BOTÃO DE SALVAR OS
+    const btnSalvarOS = document.getElementById("salvar_os");
+    if (btnSalvarOS) btnSalvarOS.disabled = true;
 }
 // -------------------------------
 // ASSINATURA TECNICO
