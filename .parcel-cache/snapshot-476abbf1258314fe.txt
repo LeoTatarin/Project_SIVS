@@ -1,4 +1,4 @@
-3700
+3690
 82C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\features\imagecapture.js134009697550889075 0
 73C:\Users\User\project_SIVS\node_modules\@parcel\workers\lib\WorkerFarm.js134009697456054547 0
 37C:\Users\User\project_SIVS\src\styles134008815087525597 1
@@ -7,7 +7,7 @@
 71C:\Users\User\project_SIVS\node_modules\@parcel\watcher\src\Debounce.cc134009697384233210 0
 69C:\Users\User\project_SIVS\node_modules\regenerator-runtime\README.md134009697371645945 0
 45C:\Users\User\project_SIVS\src\images\ass.png134009699569432592 0
-31C:\Users\User\project_SIVS\dist134009711611682784 1
+31C:\Users\User\project_SIVS\dist134009710783156660 1
 69C:\Users\User\project_SIVS\node_modules\@parcel\transformer-image\src134009697385874798 1
 74C:\Users\User\project_SIVS\src\styles\css\bootstrap-reboot.rtl.min.css.map133946504810000000 0
 71C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\regions\PY.js134009697554953227 0
@@ -1201,7 +1201,6 @@
 65C:\Users\User\project_SIVS\node_modules\ordered-binary\index.d.ts134009697414123156 0
 72C:\Users\User\project_SIVS\node_modules\@parcel\transformer-node\LICENSE134009697348526335 0
 62C:\Users\User\project_SIVS\node_modules\ordered-binary\LICENSE134009697346431914 0
-48C:\Users\User\project_SIVS\dist\ass.cd00d18f.png134009711610495216 0
 71C:\Users\User\project_SIVS\node_modules\ordered-binary\rollup.config.js134009697373366326 0
 66C:\Users\User\project_SIVS\node_modules\lightningcss\node\index.js134009697403322404 0
 69C:\Users\User\project_SIVS\node_modules\ordered-binary\dist\index.cjs134009697353132202 0
@@ -1439,7 +1438,7 @@
 95C:\Users\User\project_SIVS\node_modules\lmdb\node_modules\node-addon-api\tools\eslint-format.js134009697429334300 0
 71C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\regions\MM.js134009697553158829 0
 63C:\Users\User\project_SIVS\node_modules\lmdb\dist\index.cjs.map134009697464205978 0
-39C:\Users\User\project_SIVS\dist\os.html134009711611422752 0
+39C:\Users\User\project_SIVS\dist\os.html134009710783146654 0
 59C:\Users\User\project_SIVS\node_modules\lmdb\dict\dict2.txt134009697471832096 0
 62C:\Users\User\project_SIVS\node_modules\lmdb\dependencies\lmdb134009697367164563 1
 94C:\Users\User\project_SIVS\node_modules\@parcel\runtime-browser-hmr\src\loaders\.eslintrc.json134009697392921602 0
@@ -1450,7 +1449,6 @@
 68C:\Users\User\project_SIVS\node_modules\@parcel\utils\src\urlJoin.js134009697457974699 0
 91C:\Users\User\project_SIVS\node_modules\@swc\helpers\cjs\_class_apply_descriptor_update.cjs134009697433084591 0
 77C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\features\rellist.js134009697555093244 0
-57C:\Users\User\project_SIVS\dist\project_SIVS.af664edf.css134009711611422752 0
 87C:\Users\User\project_SIVS\node_modules\@swc\helpers\cjs\_class_private_method_init.cjs134009697454044407 0
 84C:\Users\User\project_SIVS\node_modules\lmdb\dependencies\v8\v8-fast-api-calls-v16.h134009697460014844 0
 86C:\Users\User\project_SIVS\node_modules\@parcel\core\lib\requests\ValidationRequest.js134009697476878173 0
@@ -1880,7 +1878,6 @@
 71C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\regions\BB.js134009697456794610 0
 134C:\Users\User\project_SIVS\node_modules\@parcel\core\test\fixtures\local-plugin-config-pkg\node_modules\parcel-config-local\index.json134009697479945668 0
 71C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\regions\BF.js134009697457134643 0
-60C:\Users\User\project_SIVS\dist\project_SIVS.daf43cd5.js.map134009711611652771 0
 71C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\regions\BG.js134009697457174641 0
 65C:\Users\User\project_SIVS\node_modules\@parcel\feature-flags\src134009697380203095 1
 71C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\regions\BH.js134009697457204640 0
@@ -2027,7 +2024,6 @@
 71C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\regions\PF.js134009697554473186 0
 92C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\features\element-scroll-methods.js134009697549202367 0
 71C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\regions\PG.js134009697554483191 0
-61C:\Users\User\project_SIVS\dist\project_SIVS.4cb99a54.css.map134009711611652771 0
 83C:\Users\User\project_SIVS\node_modules\caniuse-lite\data\features\css-animation.js134009697460294874 0
 85C:\Users\User\project_SIVS\node_modules\@swc\helpers\_\_class_apply_descriptor_update134009697475255282 1
 69C:\Users\User\project_SIVS\node_modules\@parcel\profiler\src\index.js134009697368372850 0
@@ -2775,7 +2771,6 @@
 89C:\Users\User\project_SIVS\node_modules\@swc\helpers\src\_possible_constructor_return.mjs134009697503529747 0
 77C:\Users\User\project_SIVS\node_modules\@swc\helpers\src\_read_only_error.mjs134009697503539739 0
 78C:\Users\User\project_SIVS\node_modules\@swc\helpers\src\_set_prototype_of.mjs134009697503549738 0
-57C:\Users\User\project_SIVS\dist\project_SIVS.4cb99a54.css134009711611442766 0
 87C:\Users\User\project_SIVS\node_modules\@swc\helpers\src\_skip_first_generator_next.mjs134009697503619753 0
 83C:\Users\User\project_SIVS\node_modules\@swc\helpers\src\_sliced_to_array_loose.mjs134009697503639754 0
 67C:\Users\User\project_SIVS\node_modules\@swc\helpers\src\_throw.mjs134009697503699749 0
@@ -2979,9 +2974,7 @@
 54C:\Users\User\project_SIVS\node_modules\@parcel\events134009697408812777 1
 72C:\Users\User\project_SIVS\node_modules\@parcel\packager-js\lib\index.js134009697425594035 0
 61C:\Users\User\project_SIVS\node_modules\@parcel\feature-flags134009697386626380 1
-61C:\Users\User\project_SIVS\dist\project_SIVS.af664edf.css.map134009711611572779 0
 50C:\Users\User\project_SIVS\node_modules\@parcel\fs134009697436914880 1
-55C:\Users\User\project_SIVS\dist\logo_sivs2.b1c7d0ec.png134009711610505222 0
 54C:\Users\User\project_SIVS\node_modules\@parcel\logger134009697375762683 1
 67C:\Users\User\project_SIVS\node_modules\@parcel\reporter-dev-server134009697453314349 1
 66C:\Users\User\project_SIVS\node_modules\@parcel\node-resolver-core134009697386656384 1
@@ -3545,7 +3538,7 @@
 79C:\Users\User\project_SIVS\node_modules\@parcel\core\src\dumpGraphToGraphViz.js134009697457314647 0
 94C:\Users\User\project_SIVS\node_modules\@parcel\core\test\fixtures\targets-default-distdir-two134009697484369261 1
 107C:\Users\User\project_SIVS\node_modules\@parcel\core\test\fixtures\targets-default-distdir-two\package.json134009697484739300 0
-42C:\Users\User\project_SIVS\dist\index.html134009711611422752 0
+42C:\Users\User\project_SIVS\dist\index.html134009710781856562 0
 107C:\Users\User\project_SIVS\node_modules\@parcel\core\test\fixtures\targets-default-distdir-one\package.json134009697484359266 0
 108C:\Users\User\project_SIVS\node_modules\@parcel\core\test\fixtures\targets-default-distdir-none\package.json134009697484339262 0
 90C:\Users\User\project_SIVS\node_modules\@parcel\core\test\fixtures\plugins\local-plugin.js134009697458944765 0
@@ -3691,11 +3684,8 @@
 71C:\Users\User\project_SIVS\node_modules\.bin\update-browserslist-db.cmd134009697560880465 0
 55C:\Users\User\project_SIVS\dist\logo_sivs2.4a520067.png134009710782146587 0
 46C:\Users\User\project_SIVS\dist\os.1c09096e.js134009710782176575 0
-56C:\Users\User\project_SIVS\dist\project_SIVS.0c1de8f1.js134009711611422752 0
-60C:\Users\User\project_SIVS\dist\project_SIVS.0c1de8f1.js.map134009711611612760 0
 56C:\Users\User\project_SIVS\dist\project_SIVS.1980d0f7.js134009710782586615 0
 56C:\Users\User\project_SIVS\dist\project_SIVS.59712999.js134009710782586615 0
 60C:\Users\User\project_SIVS\dist\project_SIVS.59712999.js.map134009710782666616 0
-56C:\Users\User\project_SIVS\dist\project_SIVS.daf43cd5.js134009711611442766 0
 60C:\Users\User\project_SIVS\dist\project_SIVS.f75de5e1.js.map134009710782376626 0
 47C:\Users\User\project_SIVS\dist\styles\main.css134009710782176575 0
