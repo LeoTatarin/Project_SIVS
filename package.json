@@ -5,11 +5,12 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "parcel src/index.html src/os.html",
+    "dev": "parcel src/index.html src/os.html src/scripts/main.js src/styles/main.scss src/styles/_header.scss",
     "build": "parcel build src/index.html src/os.html --dist-dir dist"
   },
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.15.4",
-    "parcel": "^2.15.4"
-  }
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/LeoTatarin/Project_SIVS/issues"
+  },
+  "homepage": "https://github.com/LeoTatarin/Project_SIVS#readme"
 }

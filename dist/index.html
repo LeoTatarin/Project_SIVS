@@ -1,34 +1,44 @@
-<!DOCTYPE html><html lang=pt_br><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Document</title><link rel=stylesheet href=/project_SIVS.af664edf.css><link rel=stylesheet href=/project_SIVS.4cb99a54.css><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel=stylesheet><body>
-    <header class=mb-4>
-    <nav class="bg-white border-bottom navbar navbar-expand-lg">
+<!DOCTYPE html><html lang="pt_br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/project_SIVS.6f3518f0.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="mb-4">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
         <div class="container header">
             
-            
-            <div class=header__logo>
-                <a class=navbar-brand href=#>
-                    <img src=/logo_sivs2.b1c7d0ec.png alt="logo sivs">
+            <!-- Logo -->
+            <div class="header__logo">
+                <a class="navbar-brand" href="#">
+                    <img src="/logo_sivs2.df860dcf.png" alt="logo sivs">
                 </a>
             </div>
 
-            
-            <button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#menuNav aria-controls=menuNav aria-expanded=false aria-label="Toggle navigation">
-                <span class=navbar-toggler-icon></span>
+            <!-- Botão Hamburguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
-            
-            <div class="collapse navbar-collapse" id=menuNav>
-                <ul class="header__itens ms-auto navbar-nav">
-                    <li class="header__itens__item nav-item">
-                        <a class=nav-link href=#>Abrir O.S</a>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto header__itens">
+                    <li class="nav-item header__itens__item">
+                        <a class="nav-link" href="#">Abrir O.S</a>
                     </li>
-                    <li class="header__itens__item nav-item">
-                        <a class=nav-link href=#>Meus Serviços</a>
+                    <li class="nav-item header__itens__item">
+                        <a class="nav-link" href="#">Meus Serviços</a>
                     </li>
-                    <li class="header__itens__item nav-item">
-                        <a class=nav-link href=#>Assinatura</a>
+                    <li class="nav-item header__itens__item">
+                        <a class="nav-link" href="#">Assinatura</a>
                     </li>
-                    <li class="header__itens__item nav-item">
-                        <a class=nav-link href=#>Voltar ao SIVS</a>
+                    <li class="nav-item header__itens__item">
+                        <a class="nav-link" href="#">Voltar ao SIVS</a>
                     </li>
                 </ul>
             </div>
@@ -36,47 +46,47 @@
     </nav>
 </header>
 
-<div class="border container mb-4 rounded">
-    <div class=titulo>
-        <h5 class="mb-2 mt-2 text-body">Acesso Rápido:</h5>
+<div class="container border rounded mb-4">
+    <div class="titulo">
+        <h5 class="text-body mt-2 mb-2">Acesso Rápido:</h5>
     </div>
-    <button class="btn--sivs mb-2 mt-2">Abrir O.S</button>
-    <button class="btn--sivs mb-2 mt-2">Minhas O.S</button>
-    <button class="btn--sivs mb-2 mt-2">Assinatura Multipla</button>
+    <button class="btn--sivs mt-2 mb-2">Abrir O.S</button>
+    <button class="btn--sivs mt-2 mb-2">Minhas O.S</button>
+    <button class="btn--sivs mt-2 mb-2">Assinatura Multipla</button>
 </div>
-<div class="border container mb-4 rounded">
-    <div class=titulo>
-        <h5 class="mb-2 mt-2 text-body">Acesso Direto:</h5>
+<div class="container border rounded mb-4">
+    <div class="titulo">
+        <h5 class="text-body mt-2 mb-2">Acesso Direto:</h5>
     </div>
     <div>
-        <input class="mb-2 mt-2 placeholder--sivs" name=osnr placeholder="Digite a O.S.">
-        <button class="btn--sivs mb-2 mt-2">Buscar</button>
+        <input class="mb-2 mt-2 placeholder--sivs" type="text" name="osnr" placeholder="Digite a O.S.">
+        <button class="btn--sivs mt-2 mb-2">Buscar</button>
     </div>
 </div>
-<div class="border container mb-4 rounded">
-    <div class=titulo>
-        <h5 class="mb-2 mt-2 text-body">Agendamento:</h5>
+<div class="container border rounded mb-4">
+    <div class="titulo">
+        <h5 class="text-body mt-2 mb-2">Agendamento:</h5>
         <p>De: <span>--/--/---</span> até: <span>--/--/----</span></p>
     </div>
     <div>
-        <button class="btn--sivs mb-2 mt-2">-1 Semana</button>
-        <button class="btn--sivs mb-2 mt-2">Semana Atual</button>
-        <button class="btn--sivs mb-2 mt-2">+1 Semana</button>
+        <button class="btn--sivs mt-2 mb-2">-1 Semana</button>
+        <button class="btn--sivs mt-2 mb-2">Semana Atual</button>
+        <button class="btn--sivs mt-2 mb-2">+1 Semana</button>
     </div>
     <table class="table table-striped">
-        <tr>
-            <th colspan=7>DD/MM/AAAA</th>
+        <tbody><tr>
+            <th colspan="7">DD/MM/AAAA</th>
         </tr>
         <tr>
-            <td colspan=7>J R EHLKE E CIA LTDA  End. Avenida João Gualberto,1661 - Juvevê Curitiba PR</td>
+            <td colspan="7">J R EHLKE E CIA LTDA  End. Avenida João Gualberto,1661 - Juvevê Curitiba PR</td>
         </tr>
         <tr>
-            <td>O.S</td>
-            <td colspan=6>Descrição</td>
+            <td colspan="1">O.S</td>
+            <td colspan="6">Descrição</td>
         </tr>
         <tr>
-            <td class=coluna__OS>
-                <a href=/os.html class=btn-os-link>9250XXXX</a>
+            <td colspan="1" class="coluna__OS">
+                <a href="/os.html" class="btn-os-link">9250XXXX</a>
                 <b>Status:</b>
                 <p>XXX</p>
                 <b>Tipo:</b>
@@ -84,10 +94,10 @@
                 <b>Setor:</b>
                 <p>Manutenção - IVD</p>
             </td>
-            <td colspan=6 class=coluna__descricao>
-                <div class=alerta>
-                    <b class=alerta__texto>Resumo:</b>
-                    <span class=alerta__texto>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+            <td colspan="6" class="coluna__descricao">
+                <div class="alerta">
+                    <b class="alerta__texto">Resumo:</b>
+                    <span class="alerta__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                 </div>
                 <div>
                     <b>Equipamento:</b>
@@ -107,18 +117,18 @@
         </tr>
 
         <tr>
-            <th colspan=7>DD/MM/AAAA</th>
+            <th colspan="7">DD/MM/AAAA</th>
         </tr>
         <tr>
-            <td colspan=7>J R EHLKE E CIA LTDA  End. Avenida João Gualberto,1661 - Juvevê Curitiba PR</td>
+            <td colspan="7">J R EHLKE E CIA LTDA  End. Avenida João Gualberto,1661 - Juvevê Curitiba PR</td>
         </tr>
         <tr>
-            <td>O.S</td>
-            <td colspan=6>Descrição</td>
+            <td colspan="1">O.S</td>
+            <td colspan="6">Descrição</td>
         </tr>
-        <tr class=status>
-            <td class="coluna__OS status">
-                <a href=/os.html class=btn-os-link>9250XXXX</a>
+        <tr class="status">
+            <td colspan="1" class="coluna__OS status">
+                <a href="/os.html" class="btn-os-link">9250XXXX</a>
                 <b>Status:</b>
                 <p>CON</p>
                 <b>Tipo:</b>
@@ -126,10 +136,10 @@
                 <b>Setor:</b>
                 <p>Manutenção - IVD</p>
             </td>
-            <td colspan=6 class="coluna__descricao status">
-                <div class=alerta>
-                    <b class=alerta__texto>Resumo:</b>
-                    <span class=alerta__texto>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+            <td colspan="6" class="coluna__descricao status">
+                <div class="alerta">
+                    <b class="alerta__texto">Resumo:</b>
+                    <span class="alerta__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                 </div>
                 <div>
                     <b>Equipamento:</b>
@@ -147,9 +157,10 @@
                 </div>
             </td>         
         </tr>
-    </table>
+    </tbody></table>
 </div>
     
-    <script src=/project_SIVS.0c1de8f1.js></script>
-    <script src=/project_SIVS.daf43cd5.js></script>
+    <script src="/project_SIVS.f75de5e1.js"></script>
+    <script src="/project_SIVS.1980d0f7.js"></script>
 
+<script src="/project_SIVS.59712999.js"></script></body></html>
