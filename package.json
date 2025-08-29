@@ -1,14 +1,14 @@
 {
   "name": "projeto_sivs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto com Parcel para deploy na Vercel",
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "npx parcel src/index.html src/os.html src/styles/main.scss src/scripts/main.js",
-    "build": "npx parcel build src/index.html src/os.html --dist-dir dist"
+    "dev": "parcel src/index.html src/os.html",
+    "build": "parcel build src/index.html src/os.html --dist-dir dist"
   },
-  "dependencies": {
+  "devDependencies": {
     "@parcel/transformer-sass": "^2.15.4",
     "parcel": "^2.15.4"
   }
