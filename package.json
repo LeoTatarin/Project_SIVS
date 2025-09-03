@@ -5,8 +5,9 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "parcel src/index.html src/os.html src/scripts/main.js src/styles/main.scss",
-    "build": "chmod +x ./node_modules/.bin/parcel && parcel build index.html"
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
   },
   "keywords": [],
   "bugs": {
@@ -16,7 +17,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.15.4",
     "lightningcss": "^1.30.1",
-    "parcel": "^2.15.4"
+    "parcel": "^2.15.4",
+    "vite": "^7.1.4"
   },
   "dependencies": {
     "ansi-styles": "^4.3.0",
