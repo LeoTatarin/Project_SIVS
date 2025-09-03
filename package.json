@@ -5,8 +5,10 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "parcel",
-    "build": "npx parcel build src/index.html"
+    "dev": "npx parcel src/index.html --port 3000",
+    "prebuild": "chmod +x ./node_modules/.bin/parcel || true",
+    "build": "npx parcel build src/index.html",
+    "start": "npx parcel serve src/index.html"
   },
   "keywords": [],
   "bugs": {
@@ -14,6 +16,7 @@
   },
   "homepage": "https://github.com/LeoTatarin/Project_SIVS#readme",
   "dependencies": {
+    "parcel": "^2.15.4",
     "ansi-styles": "^4.3.0",
     "base-x": "^3.0.11",
     "braces": "^3.0.3",
@@ -49,7 +52,6 @@
     "node-releases": "^2.0.19",
     "nullthrows": "^1.1.1",
     "ordered-binary": "^1.6.0",
-    "parcel": "^2.15.4",
     "picocolors": "^1.1.1",
     "picomatch": "^2.3.1",
     "postcss-value-parser": "^4.2.0",
