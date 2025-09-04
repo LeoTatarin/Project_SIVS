@@ -1,4 +1,4 @@
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '/src/scripts/js/bootstrap.bundle.min.js';
 
 // -------------------------------
 // COMUNICAÇÃO
