@@ -6,7 +6,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "parcel src/index.html src/os.html src/scripts/main.js src/styles/main.scss",
-    "build": "chmod +x ./node_modules/.bin/parcel && parcel build index.html"
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "bugs": {
