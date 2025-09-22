@@ -1,152 +1,6 @@
 import '/src/scripts/js/bootstrap.bundle.min.js';
 
 // -------------------------------
-// COMUNICAÇÃO
-// -------------------------------
-
-// Pegando os elementos do HTML
-const textarea = document.getElementById("mensage"); // Campo de texto da mensagem
-const btnAdd = document.getElementById("btnAdd");    // Botão "Adicionar comunicação"
-const listaMensagens = document.getElementById("mensagens"); // Área onde as mensagens serão exibidas
-
-// Evento que é disparado sempre que o usuário digita no textarea
-textarea.addEventListener("input", function () {
-    // Se o campo estiver vazio (ou só com espaços), desabilita o botão
-    btnAdd.disabled = textarea.value.trim() === "";
-});
-
-// Evento que é disparado quando o usuário clica no botão
-btnAdd.addEventListener("click", function () {
-    // Pega o texto digitado, removendo espaços extras no começo e fim
-    const texto = textarea.value.trim();
-
-    // Só adiciona a mensagem se o campo não estiver vazio
-    if (texto !== "") {
-        // Cria um novo elemento <div> para a nova mensagem
-        const novaMensagem = document.createElement("div");
-
-        // Adiciona as classes Bootstrap que deixam o estilo igual ao exemplo
-        novaMensagem.classList.add("container", "border", "rounded", "m-0", "mb-2");
-
-        // Define o conteúdo HTML da nova mensagem
-        novaMensagem.innerHTML = `
-            <b>--nome de usuario--</b>
-            <p class="mb-0 w-100">${texto}</p>
-        `;
-
-        // Adiciona a nova mensagem no final da lista
-        listaMensagens.appendChild(novaMensagem);
-
-        // Limpa o campo de texto para o usuário digitar outra mensagem
-        textarea.value = "";
-
-        // Desabilita o botão novamente até que o usuário digite algo novo
-        btnAdd.disabled = true;
-    }
-});
-
-
-// -------------------------------
-// SOLICITAÇÃO DE PEÇAS (novo trecho)
-// -------------------------------
-
-// pega os elementos
-const btnAdicionar = document.getElementById("btn-adicionar");
-const formPeca = document.getElementById("form-peca");
-const tabela = document.getElementById("tabela-pecas");
-
-// quando clicar no botão, mostra o formulário
-if (btnAdicionar) {
-    btnAdicionar.addEventListener("click", () => {
-        formPeca.style.display = "block"; // exibe o form
-        btnAdicionar.style.display = "none"; // esconde o botão
-    });
-}
-
-// quando enviar o formulário
-if (formPeca) {
-    formPeca.addEventListener("submit", (event) => {
-        event.preventDefault(); // evita recarregar a página
-
-        // pega os valores digitados
-        const nome = document.getElementById("nome").value;
-        const quantidade = document.getElementById("quantidade").value;
-        const partnumber = document.getElementById("partnumber").value;
-
-        // cria uma nova linha <tr>
-        const novaLinha = document.createElement("tr");
-
-        // insere as células <td>
-        novaLinha.innerHTML = `
-            <td style="padding:8px;">${nome}</td>
-            <td style="padding:8px;">${quantidade}</td>
-            <td style="padding:8px;">${partnumber}</td>
-        `;
-
-        // adiciona a linha na tabela
-        tabela.appendChild(novaLinha);
-
-        // limpa o formulário
-        formPeca.reset();
-
-        // esconde o formulário e mostra o botão de novo
-        formPeca.style.display = "none";
-        btnAdicionar.style.display = "block";
-    });
-}
-
-
-// -------------------------------
-// UPLOAD DE ARQUIVOS
-// -------------------------------
-
-const btnArquivo = document.getElementById("btn-arquivo");
-const formArquivo = document.getElementById("form-arquivo");
-const tabelaArquivos = document.getElementById("tabela-arquivos");
-
-// mostrar formulário
-btnArquivo.addEventListener("click", () => {
-    formArquivo.style.display = "block";
-    btnArquivo.style.display = "none";
-});
-
-// ao enviar o formulário
-formArquivo.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const fileInput = document.getElementById("fileInput");
-    const descricao = document.getElementById("descricaoArquivo").value.trim();
-
-    if (fileInput.files.length > 0 && descricao) {
-        const arquivo = fileInput.files[0]; // pega o arquivo enviado
-        const nomeArquivo = arquivo.name;
-
-        // cria uma URL temporária para permitir download
-        const urlDownload = URL.createObjectURL(arquivo);
-
-        // cria a nova linha da tabela
-        const novaLinha = document.createElement("tr");
-        novaLinha.innerHTML = `
-            <td colspan="5" style="padding:8px;">${nomeArquivo}</td>
-            <td colspan="10" style="padding:8px;">${descricao}</td>
-            <td colspan="1" style="padding:8px;">
-            <a href="${urlDownload}" download="${nomeArquivo}" style="padding:8px;">
-            ⬇️
-            </a>
-            </td>
-        `;
-
-        // adiciona na tabela
-        tabelaArquivos.appendChild(novaLinha);
-
-        // limpa e esconde formulário
-        formArquivo.reset();
-        formArquivo.style.display = "none";
-        btnArquivo.style.display = "block";
-    }
-});
-
-// -------------------------------
 // ASSINATURA CLIENTE COM VALIDAÇÃO, MODAL E DESABILITAÇÃO
 // -------------------------------
 
@@ -247,6 +101,7 @@ const modalTexto = document.getElementById("modal-texto");
 const modalCancelar = document.getElementById("modal-cancelar");
 const modalConfirmar = document.getElementById("modal-confirmar");
 
+// abre o modal centralizado
 function abrirModal(camposVazios) {
     let texto = "Deseja confirmar assinatura?";
     if (camposVazios.length > 0) {
@@ -256,13 +111,19 @@ function abrirModal(camposVazios) {
     }
     modalTexto.innerHTML = texto;
     modal.style.display = "flex";
+    modal.style.visibility = "visible";
+    modal.style.opacity = "1";
 }
 
+// fecha o modal (somente quando clicar em Confirmar ou Cancelar)
 function fecharModal() {
     modal.style.display = "none";
+    modal.style.visibility = "hidden";
+    modal.style.opacity = "0";
     assinaturaPendente = null;
 }
 
+// clique nos botões do modal
 modalCancelar.addEventListener("click", fecharModal);
 
 modalConfirmar.addEventListener("click", () => {
@@ -287,7 +148,7 @@ btnSalvarCliente.addEventListener("click", () => {
     const dataURL = canvas.toDataURL();
     assinaturaPendente = { nome, dataURL };
 
-    abrirModal(camposVazios); // abre modal, confirma ou cancela
+    abrirModal(camposVazios); // abre modal, só fecha se Confirmar ou Cancelar
 });
 
 // função que realmente salva assinatura
@@ -315,13 +176,13 @@ function salvarAssinatura(nome, dataURL) {
     btnAssCliente.style.display = "none";
     btnAssCliente2.style.display = "none";
 
-    // DESABILITAR CAMPOS VERIFICADOS, mantendo os valores
+    // desabilitar campos verificados, mantendo os valores
     camposObrigatorios.forEach(campo => {
         const el = document.getElementById(campo.id);
         if (el) el.disabled = true;
     });
 
-    // DESABILITAR BOTÃO DE SALVAR OS
+    // desabilitar botão de salvar OS
     const btnSalvarOS = document.getElementById("salvar_os");
     if (btnSalvarOS) btnSalvarOS.disabled = true;
 }
@@ -335,10 +196,8 @@ const btnAssTecnico2 = document.getElementById("btn-ass-tecnico2");
 const imgTecnico = document.getElementById("img-tecnico");
 
 btnAssTecnico.addEventListener("click", () => {
-    // exibe a assinatura do técnico
     imgTecnico.style.display = "block";
 
-     // cria ou atualiza o texto com data/hora
     let infoTec = document.getElementById("info-ass-tecnico");
     if (!infoTec) {
         infoTec = document.createElement("div");
@@ -348,13 +207,36 @@ btnAssTecnico.addEventListener("click", () => {
     }
 
     const agora = new Date();
-    const dataHoraFormatada = agora.toLocaleString(); // ex: 27/08/2025 09:30:15
+    const dataHoraFormatada = agora.toLocaleString();
     infoTec.textContent = `Assinatura do técnico registrada em ${dataHoraFormatada}`;
 
-    // opcional: desabilita o botão para não clicar novamente
     btnAssTecnico.style.display = "none";
     btnAssTecnico2.style.display = "none";
 });
 
+
+// -------------------------------
+// PULAR PARA AREA DE ASSINATURAS
+// -------------------------------
+
+const tituloAssinaturas = document.getElementById("assinaturas");
+
+function rolarParaAssinaturas() {
+    if (tituloAssinaturas) {
+        const y = tituloAssinaturas.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+            top: y - 500,        // 500px acima do elemento
+            behavior: "smooth"
+        });
+    }
+}
+
+if (btnAssCliente2) {
+    btnAssCliente2.addEventListener("click", rolarParaAssinaturas);
+}
+
+if (btnAssTecnico2) {
+    btnAssTecnico2.addEventListener("click", rolarParaAssinaturas);
+}
 
 

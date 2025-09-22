@@ -12,52 +12,73 @@
 </head>
 <body>
     <header class="mb-4">
-    <nav class="navbar navbar-expand-lg bg-white border-bottom">
-        <div class="container header">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom">
+            <div class="container header">
             
-            <!-- Logo -->
-            <div class="header__logo">
-                <a class="navbar-brand" href="#">
-                    <img src="/src/images/logo_sivs2.png" alt="logo sivs">
-                </a>
-            </div>
+                <!-- Logo -->
+                <div class="header__logo">
+                    <a class="navbar-brand" href="#">
+                        <img src="/src/images/logo_sivs2.png" alt="logo sivs">
+                    </a>
+                </div>
 
-            <!-- Botão Hamburguer -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Botão Hamburguer -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="menuNav">
-                <ul class="navbar-nav ms-auto header__itens">
-                    <li class="nav-item header__itens__item">
-                        <a class="nav-link" href="#">Abrir O.S</a>
-                    </li>
-                    <li class="nav-item header__itens__item">
-                        <a class="nav-link" href="#">Meus Serviços</a>
-                    </li>
-                    <li class="nav-item header__itens__item">
-                        <a class="nav-link" href="#">Assinatura</a>
-                    </li>
-                    <li class="nav-item header__itens__item">
-                        <a class="nav-link" href="#">Voltar ao SIVS</a>
-                    </li>
-                </ul>
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav ms-auto header__itens">
+                        <li class="nav-item header__itens__item">
+                            <a class="nav-link" href="#">Abrir O.S</a>
+                        </li>
+                        <li class="nav-item header__itens__item">
+                            <a class="nav-link" href="#">Assinatura</a>
+                        </li>
+                        <li class="nav-item header__itens__item">
+                            <a class="nav-link" href="#">Voltar ao SIVS</a>
+                        </li>
+                        <li class="nav-item dropdown header__itens__item">
+                            <a class="nav-link dropdown-toggle" href="#" id="meusServicosMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Meus Serviços</a>
+                            <ul id="submenu" class="dropdown-menu" aria-labelledby="meusServicosMenu">
+                                <li class="lista_submenu">
+                                    <h5 class="titulo-dropdown">O.S</h5>
+                                    <a class="dropdown-item" href="#">Minhas O.S</a>
+                                    <a class="dropdown-item" href="#">Minhas O.S por status</a>
+                                </li>
+                                <li class="lista_submenu">
+                                    <h5 class="titulo-dropdown">Ações</h5>
+                                    <a class="dropdown-item" href="#">Alterar status</a>
+                                </li>
+                                <li class="lista_submenu">
+                                    <h5 class="titulo-dropdown">Clientes</h5>
+                                    <a class="dropdown-item" href="#">Cronograma</a>
+                                    <a class="dropdown-item" href="#">Equipamentos</a>
+                                </li>
+                                <li class="lista_submenu">
+                                    <h5 class="titulo-dropdown">Devolução</h5>
+                                    <a class="dropdown-item" href="#">Minhas devoluções</a>
+                                    <a class="dropdown-item" href="#">O.S por setor</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 <div class="container border rounded mb-4">
     <div class="titulo">
         <h5 class="text-body mt-2 mb-2">Outras Ações:</h5>
     </div>
     <div class="menu-botoes">
-        <button class="btn--sivs mt-2 mb-2">Alterar Status</button>
-        <button class="btn--sivs mt-2 mb-2">Assinatura de devolução/entrega</button>
-        <button class="btn--sivs mt-2 mb-2">Adicionar certificado</button>
-        <button class="btn--sivs mt-2 mb-2">Enviar por e-mail</button>
-        <button class="btn--sivs mt-2 mb-2">Imprimir</button>
+        <button id="alterar-status" class="btn--sivs mt-2 mb-2">Alterar Status</button>
+        <button id="ass-devolucao" class="btn--sivs mt-2 mb-2">Assinatura de devolução/entrega</button>
+        <button id="add-certificado" class="btn--sivs mt-2 mb-2">Adicionar certificado</button>
+        <button id="enviar-email" class="btn--sivs mt-2 mb-2">Enviar por e-mail</button>
+        <button id="imprimir" class="btn--sivs mt-2 mb-2">Imprimir</button>
         <button id="btn-ass-cliente2" type="submit" class="btn--sivs mt-2 mb-2">Coletar assinatura cliente</button>
         <button id="btn-ass-tecnico2" type="submit" class="btn--sivs mt-2 mb-2">Coletar assinatura tecnico</button>
     </div>
@@ -65,7 +86,10 @@
 <div class="container border rounded mb-4">
     <div class="titulo">
         <h5 class="text-body mt-2 mb-2">9250XXXX:</h5>
-        <span class="d-flex align-items-center text-primary m-2 span_status">CON - Serviço - Execução Finalizada</span>
+        <span class="align-items-center text-primary m-2 span_status" id="status_con">CON - Serviço - Execução Finalizada</span>
+        <span class="align-items-center text-primary m-2 span_status" id="status_cnf">CNF - Serviço - Não Finalizado</span>
+        <span class="align-items-center text-primary m-2 span_status" id="status_cra">CRA - Serviço - Não Iniciado/Reagendar</span>
+        <span class="align-items-center text-primary m-2 span_status" id="status_cnp">CNP - Serviço - Necessário Peça</span>
     </div>
     <div class="alerta mb-2">
         <b class="alerta__texto">Resumo:</b>
@@ -214,8 +238,6 @@
     <div class="comunicacao">
         <div id="mensagens">
             <div class="container border rounded mb-2">
-                <b>--nome de usuario--</b>
-                <p class="mb-0 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero laboriosam labore fugit voluptates totam. Iure nihil, perferendis, libero repellat non porro mollitia quas impedit at molestias iusto eius fugit deleniti.</p>
             </div>
         </div>
         <div id="user_mensage">
@@ -229,7 +251,7 @@
         <h5 class="text-body mt-2 mb-2">Solicitação de peça:</h5>
     </div>
     <table id="tabela-pecas" class="table table-bordered">
-        <tr>
+        <tr class="somente_mobile">
             <td>Nome:</td>
             <td>Quantidade:</td>
             <td>Part Number:</td>
@@ -238,10 +260,10 @@
     <button id="btn-adicionar" class="btn--sivs mt-2 mb-3 w-100">Adicionar pedido de peça</button>
 
     <form id="form-peca" style="display:none;" class="mt-2">
-    <input class="form-control mb-2" type="text" id="nome" placeholder="Nome da peça" required>
-    <input class="form-control mb-2" type="number" id="quantidade" placeholder="Quantidade" required>
-    <input class="form-control mb-2" type="text" id="partnumber" placeholder="Part Number" required>
-    <button type="submit" class="btn--sivs mt-2 mb-3 w-100">Adicionar</button>
+    <input class="form-control mb-2" type="text" maxlength="25" id="nome" placeholder="Nome da peça" required>
+    <input class="form-control mb-2" type="number" min="1" max="999" id="quantidade" placeholder="Quantidade" required>
+    <input class="form-control mb-2" type="text" maxlength="25" id="partnumber" placeholder="Part Number" required>
+    <button id="btn-add-peca" type="submit" class="btn--sivs mt-2 mb-3 w-100">Adicionar</button>
     </form>
 
 </div>
@@ -250,22 +272,22 @@
         <h5 class="text-body mt-2 mb-2">Arquivos:</h5>
     </div>
     <table id="tabela-arquivos" class="table table-bordered">
-        <tr>
-            <td colspan="5">Nome do arquivo:</td>
-            <td colspan="10">Descrição:</td>
-            <td colspan="1">Baixar:</td>
+        <tr class="somente_mobile">
+            <td>Nome do arquivo:</td>
+            <td>Descrição:</td>
+            <td>Baixar:</td>
         </tr>
     </table>
     <button id="btn-arquivo" class="btn--sivs mt-2 mb-3 w-100">Adicionar arquivo</button>
     <form id="form-arquivo" style="display:none;" class="mt-2">
         <input class="form-control mb-2" type="file" id="fileInput" required>
         <input class="form-control mb-2" type="text" id="descricaoArquivo" placeholder="Descrição do arquivo" required>
-        <button type="submit" class="btn--sivs mt-2 mb-3 w-100">Enviar</button>
+        <button id="btn-add-arq" type="submit" class="btn--sivs mt-2 mb-3 w-100">Enviar</button>
     </form>
 </div>
-</div>
+
 <div class="container border rounded mb-4">
-    <div class="titulo">
+    <div id="assinaturas" class="titulo">
         <h5 class="text-body mt-2 mb-2">Assinaturas:</h5>
     </div>
     <table class="table table-bordered">
@@ -274,7 +296,7 @@
         </tr>
         <tr>
             <td class="assinatura">
-                <img id="img-tecnico" src="/src/images/ass.png" alt="ass tecnico" min-width="200" style="display:none;">
+                <img id="img-tecnico" src="/src/images/ass.png" alt="ass tecnico" min-width="152" style="display:none;">
             </td>
         </tr>
         <tr>
@@ -282,7 +304,7 @@
         </tr>
         <tr>
             <td class="assinatura">
-                <img id="img-cliente" src="/src/images/ass.png" alt="ass cliente" width="200" style="display:none;">
+                <img id="img-cliente" src="/src/images/ass.png" alt="ass cliente" width="152" style="display:none;">
             </td>
         </tr>
     </table>
@@ -301,27 +323,41 @@
     <div class="titulo">
         <h5 class="text-body mt-2 mb-2">Historico:</h5>
     </div>
-    <table class="table table-bordered">
-        <tr>
-            <td colspan="10">Histórico:</td>
-            <td colspan="1">Local:</td>
-        </tr>
-        <tr>
-            <td colspan="10">[informações]</td>
-            <td colspan="1">[icone]</td>
-        </tr>
-            <td colspan="10">[informações]</td>
-            <td colspan="1">[icone]</td>
+    <table id="tabela-historico" class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Histórico:</td>
+                <td>Local:</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As linhas do histórico vão aparecer aqui via JS -->
+        </tbody>
     </table>
 </div>
-<div id="modal-confirmacao" style="display: none">
+<div id="modal-confirmacao" class="alerta-modal" style="display: none">
     <div class="modal-content" style="background:#fff; padding:20px; border-radius:8px; width:350px; text-align:center;">
         <p id="modal-texto"></p>
-        <button id="modal-cancelar" class="btn btn-secondary mt-2">Cancelar</button>
-        <button id="modal-confirmar" class="btn btn-primary mt-2">Confirmar</button>
+        <button id="modal-cancelar" class="btn mt-2">Cancelar</button>
+        <button id="modal-confirmar" class="btn mt-2">Confirmar</button>
+    </div>
+</div>
+<div id="modal-status" class="alerta-modal">
+    <div class="modal-content" style="background:#fff; padding:20px; border-radius:8px; width:350px; text-align:center;">
+        <h5>Selecione o novo status:</h5>
+        <button id="muda_con" class="btn--sivs mt-2 mb-2">Serviço - Execução finalizada</button>
+        <button id="muda_cnf" class="btn--sivs mt-2 mb-2">Serviço - Não finalizado</button>
+        <button id="muda_cra" class="btn--sivs mt-2 mb-2">Serviço - Não iniciado/reagendar</button>
+        <button id="muda_cnp" class="btn--sivs mt-2 mb-2">Serviço - Necessário peça</button>
+        <button id="muda_nada" class="btn--sivs mt-2 mb-2">Não alterar status e voltar</button>
     </div>
 </div>
 <script type="module" src="/src/scripts/main.js"></script>
+<script type="module" src="/src/scripts/comunicacao.js"></script>
+<script type="module" src="/src/scripts/pecas.js"></script>
+<script type="module" src="/src/scripts/uparqvs.js"></script>
+<script type="module" src="/src/scripts/historico.js"></script>
+<script type="module" src="/src/scripts/status.js"></script>
 </body>
 
 </html>
